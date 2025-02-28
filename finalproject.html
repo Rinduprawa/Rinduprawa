@@ -1,0 +1,250 @@
+<!-- 1. MENGGUNAKAN BOOTSTRAP UNTUK STYLING (LINE 14)-->
+<!-- 2. TERDAPAT KOMPONEN HEADER (LINE 30)-->
+<!-- 3. TERDAPAT MINIMAL 3 SECTION (HEADER, HERO, MEAL OF THE DAY, FIND RECIPE, & FOOTER)-->
+<!-- 4. MENAMPILKAN DATA BERUPA LIST (INGREDIENT REC ON FOOTER & FIND RECIPES)-->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Buddies</title>
+    <link rel="icon" href="/assets/images/icon.png">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/assets/css/finalproject.css">
+    
+    <!-- GOOGLE FONT -->
+    <link rel="pmealonnect" href="https://fonts.googleapis.com">
+    <link rel="pmealonnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    
+    
+    <!-- ICON LIBRARY -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    
+    <style>
+        @media (min-width: 992px) {
+          .section-wrap{
+            padding: 120px 200px;
+          }
+        }
+        @media (max-width: 992px) {
+          .section-wrap{
+            padding: 70px 40px;
+          }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark inter section-wrap py-4">
+        <div class="container-fluid">
+          <a class="navbar-brand cordo" href="#">Food<span class="text-yellow">Buddies</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="col d-flex justify-content-lg-end">
+              <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link inter" href="#motd">Meal of The Day</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link inter" href="#rec">Recommendation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link inter" href="#find">Find Recipe</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <!-- HERO  -->
+    <section class="hero section-wrap bg-blue" id="hero">
+      <div class="row m-0 pt-5">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div>
+            <h1 class="text-white cordo fw-bold">People who love to eat are always the best people</h1>
+            <p class="text-yellow cordo fw-normal"><i>- Julia Child</i></p>
+            <a href="#find"><button class="btn cordo w-50 hover">Find Recipes</button></a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-lg-end pt-3 pt-lg-0">
+          <img src="/assets/images/fp-hero.jpg" style="height: 450px;" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- MEAL OF THE DAY -->
+    <section class="motd section-wrap bg-light-blue" id="motd">
+      <div class="row m-0">
+        <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start">
+          <img src="/assets/images/fp-rec.png" style="height: 400px;" alt="">
+        </div>
+
+        <div class="col-lg-6 d-flex align-items-center pt-4 pt-lg-0">
+          <div>
+            <h1 class="cordo fs-1">Meal of The Day</h1>
+            <p class="inter fw-lighter"><Span class="text-yellow fw-bold fs-5">Pancake </Span>is a flat cake, prepared from a starch-based batter that may contain eggs, milk, and butter then cooked on a hot surface with oil or butter.</p>
+            <div class="row mb-4">
+              <div class="col-4 meal-num border-0 align-items-center">
+                <h1 class="cordo m-0">25</h1>
+                <p class="m-0">Mins Cook</p>
+              </div>
+              <div class="col-4 meal-num">
+                <h1 class="cordo m-0">12</h1>
+                <p class="m-0">Serves</p>
+              </div>
+              <div class="col-4 meal-num">
+                <h1 class="cordo m-0">156</h1>
+                <p class="m-0">Kcal</p>
+              </div>
+            </div>
+            <div class="row p-3 bg-blue">
+              <div class="col-3 align-self-center">
+                <img class="w-100" src="/assets/images/fp-qr.png" alt="">
+              </div>
+              <div class="col-9">
+                <h5 class="text-yellow cordo mb-1">Pancake</h5>
+                <h6 class="text-white inter fw-lighter m-0">Scan Me for Recipes!</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATION -->
+    <section class="rec section-wrap bg-white" id="rec">
+      <h1 class="cordo fs-1 text-center text-blue fw-bolder mb-0">Our Recommendation</h1>
+      <div class="row mb-5"><div class="col-4 p-0"></div><div class="col-4 p-0 hr"></div><div class="col-4 p-0"></div></div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <img src="/assets/images/fp-card1.jpg" class="card-img-top rounded-0" style="height: 250px;" alt="french toast">
+            <div class="card-body p-5">
+              <h2 class="card-title cordo text-blue fw-bolder">French Toast</h2>
+              <p class="text-grey inter fw-lighter pb-3">French toast is a dish made of bread soaked in eggs and milk, then fried. It is often served with butter, syrup, powdered sugar, or fruit.</p>
+              <a href="https://www.bbcgoodfood.com/recipes/french-toast" class="btn cordo fw-normal">Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <div class="card">
+            <img src="/assets/images/fp-card2.jpg" class="card-img-top rounded-0" style="height: 250px;" alt="burrito">
+            <div class="card-body p-5">
+              <h2 class="card-title cordo text-blue fw-bolder">Burrito</h2>
+              <p class="text-grey inter fw-lighter pb-3">A burrito is a Tex-Mex dish that consists of a flour tortilla wrapped around various ings, such as meat, rice, cheese, and vegetables.</p>
+              <a href="https://www.tasteofhome.com/recipes/tasty-burritos/" class="btn cordo fw-normal">Recipe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIND RECIPES -->
+    <section class="find section-wrap bg-light-blue" id="find">
+            <h1 class="cordo fs-1 text-center text-blue fw-bolder mb-0">Find Recipes by Ingredient</h1>
+            <div class="row mb-5"><div class="col-4 p-0"></div><div class="col-4 p-0 hr"></div><div class="col-4 p-0"></div></div>
+        
+            <div class = "meal-search-box">
+              <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+              <button type = "submit" class = "search-btn btn" id = "search-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+    
+          <div class = "meal-result">
+            <h2 class = "cordo fs-2 text-center text-blue fw-bolder mb-0">Your Search Results:</h2>
+            <div id= "meal"></div>
+          </div>
+    
+    
+          <div class = "meal-details">
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+              <i class = "fas fa-times"></i>
+            </button>    
+            <div class = "meal-details-content">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer section-wrap bg-blue" id="footer">
+      <div class="row">
+        <div class="col-lg-6 pb-4 pb-lg-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none">
+            <path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/>
+            <path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/>
+            <path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/>
+          </svg><br>
+          <a class="text-white cordo fs-2" href="#">Food<span style="color: #FFCA42;">Buddies</span></a>
+          <div class="col-lg-10 align-self-center">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-white fs-6 mb-1 cordo">Email:</label>
+                <input type="email" class="form-control " id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label text-white fs-6 mb-1 cordo">Your Question:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <button class="btn cordo mt-3 hover">Send</button>            
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 footer-item">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h4 class="m-0 text-yellow">Ingredient Recommendation</h4>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Tomatoes</h6>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Chicken</h6>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Beef</h6>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Eggs</h6>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Bread</h6>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Milk</h6>
+            </li>
+            <li class="list-group-item">
+              <h6 class="text-light-blue"><span class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="7" viewBox="0 0 24 7" fill="none"><path d="M12.0003 1.66683C13.0128 1.66683 13.8337 2.48764 13.8337 3.50016C13.8337 4.51268 13.0128 5.3335 12.0003 5.3335C10.9878 5.3335 10.167 4.51268 10.167 3.50016C10.167 2.48764 10.9878 1.66683 12.0003 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M21.1663 1.66683C22.1789 1.66683 22.9997 2.48764 22.9997 3.50016C22.9997 4.51268 22.1789 5.3335 21.1663 5.3335C20.1538 5.3335 19.333 4.51268 19.333 3.50016C19.333 2.48764 20.1538 1.66683 21.1663 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/><path d="M2.83333 1.66683C3.84586 1.66683 4.66667 2.48764 4.66667 3.50016C4.66667 4.51268 3.84586 5.3335 2.83333 5.3335C1.82081 5.3335 1 4.51268 1 3.50016C1 2.48764 1.82081 1.66683 2.83333 1.66683Z" stroke="#FFCA42" stroke-width="1.5"/></svg></span>
+                Rice</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CR -->
+    <p class="text-white text-center m-0 py-3 section-wrap bg-blue" style="border-top: 1px solid #FFCA42;">© 2023 Copyright: Ryn</p>
+
+    <!-- SCRIPT -->
+    <script src="/assets/js/finalproject.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>
